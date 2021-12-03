@@ -1,0 +1,128 @@
+@keyframes shakeRight {
+  0% {
+    transform: translateX(20%);
+  }
+  60% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideOutLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes shakeUp {
+  0% {
+    transform: translateY(10%);
+  }
+  60% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shakeUpSmall {
+  0% {
+    transform: translateY(1%);
+  }
+  60% {
+    transform: translateY(-1%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes textLoading {
+  0% {
+    content: "loading";
+  }
+  25% {
+    content: "loading.";
+  }
+  50% {
+    content: "loading..";
+  }
+  75% {
+    content: "loading...";
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.delay-1 {
+  animation-delay: 400ms;
+}
+.delay-2 {
+  animation-delay: 600ms;
+}
+.delay-3 {
+  animation-delay: 800ms;
+}
+.delay-4 {
+  animation-delay: 1s;
+}
+.time-1 {
+  animation-duration: 400ms;
+}
+.time-2 {
+  animation-duration: 500ms;
+}
+.time-3 {
+  animation-duration: 700ms;
+}
+.time-4 {
+  animation-duration: 800ms;
+}
+.time-5 {
+  animation-duration: 1200ms;
+}
+.time-6 {
+  animation-duration: 1500ms;
+}
+
+[data-aos="fade-up"] {
+  transform: translate3d(0, 50px, 0);
+}

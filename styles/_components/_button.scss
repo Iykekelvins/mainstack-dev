@@ -1,0 +1,25 @@
+.btn-container {
+  z-index: 1;
+  .btn {
+    font-size: 2rem;
+    background: white;
+    height: 274px;
+    width: 274px;
+    border-radius: 50%;
+    font-family: "Bellefair", serif;
+    transition: $transition;
+    position: relative;
+    &:hover {
+      &::after {
+        content: "";
+        background: $blur;
+        backdrop-filter: blur(81.5485px);
+        position: fixed;
+        height: 400px;
+        width: 400px;
+        z-index: -1;
+        border-radius: 50%;
+      }
+    }
+  }
+}

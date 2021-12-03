@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: $primary-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2.3rem;
+}
+
+h1,
+h2,
+h5 {
+  font-family: "Bellefair", serif;
+  color: $white;
+  margin: 0;
+}
+
+h4 {
+  letter-spacing: 0.295rem;
+  color: $white;
+  span {
+    font-weight: 700;
+    opacity: 0.5;
+  }
+}
+
+p {
+  font-family: "Barlow", sans-serif;
+  line-height: 2rem;
+}
+
+li,
+h4,
+h6 {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+@include media("<=940px") {
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@include media("<=360px") {
+  h2 {
+    font-size: 1.6rem;
+  }
+}
