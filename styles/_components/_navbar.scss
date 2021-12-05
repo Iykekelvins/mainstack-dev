@@ -1,131 +1,84 @@
 .nav-header {
+  background: $main-background;
+  padding: 1rem 0;
   position: sticky;
   top: 0;
-  z-index: 2;
-  padding-top: 2rem;
+  z-index: 9;
+
+  li > a {
+    color: $black;
+    font-weight: 500;
+    position: relative;
+  }
   .navbar {
     &--links {
-      background: $blur;
-      backdrop-filter: blur(81.5485px);
-    }
-    ul {
-      padding: 2rem 4rem 2rem;
-      position: relative;
-      li {
-        text-transform: uppercase;
-        margin-right: 1rem;
-        position: relative;
-        color: $white;
-        letter-spacing: 0.169rem;
-        span {
-          font-weight: 700;
-          margin-right: 0.5rem;
-        }
+      margin-left: 2rem;
+      gap: 1rem;
+      li > a {
         &:hover {
-          opacity: 0.5;
           &::after {
             content: "";
             position: absolute;
-            background: $white;
-            opacity: 0.5;
             width: 100%;
-            height: 3px;
-            top: 3rem;
+            height: 2px;
+            background: $main-black;
+            top: 25px;
             left: 0;
           }
         }
       }
     }
-    &--border {
-      width: 300px;
-      background: $white;
-      height: 1px;
-      opacity: 0.25;
-    }
-    &--active {
-      &::after {
-        content: "";
-        position: absolute;
-        background: $white;
-        width: 100%;
-        height: 3px;
-        top: 3rem;
-        left: 0;
-        transition: $transition;
-      }
-    }
-    &--toggle {
-      cursor: pointer;
-      margin-bottom: 0.5rem;
-    }
-  }
-  li > span {
-    font-weight: 700;
   }
 }
 
-@include media(">=681px") {
-  .phone-nav {
-    display: none;
-  }
+.sticky-header {
+  box-shadow: 8px 10px 12px rgb(195 195 210 / 20%);
 }
 
-@include media("<=1450px") {
-  .navbar--right {
-    position: absolute;
-    right: 0;
-  }
-}
-
-@include media("<=1024px") {
-  .navbar--border {
-    display: none;
-  }
-}
-
-@include media("<=680px") {
-  .stickynav {
-    background: $blur;
-    padding-bottom: 1rem;
-    backdrop-filter: blur(81.5485px);
-  }
-  .navbar--links {
+@include media(">860px") {
+  .navbar--toggle {
     display: none;
   }
   .phone-nav {
+    display: none;
+  }
+}
+
+@include media("<=860px") {
+  .navbar--links,
+  .navbar--buttons {
+    display: none;
+  }
+  .phone-nav {
+    flex-direction: column;
     position: fixed;
     top: 0;
-    right: 0;
-    width: 70%;
-    background: $blur;
+    left: 0;
     height: 100%;
-    backdrop-filter: blur(81.5485px);
-    z-index: 2;
-    &--active {
-      opacity: 0.5;
-    }
+    width: 100%;
+    box-shadow: 8px 10px 12px rgb(195 195 210 / 20%);
+    background: #f2f5fa;
+    padding: 1.5rem;
     ul {
-      margin-top: 8rem;
-      margin-left: 1rem;
+      flex-direction: column;
+      margin-top: 3rem;
       li {
-        margin-bottom: 2rem;
-        color: $white;
-        letter-spacing: 0.169rem;
-        text-transform: uppercase;
-        transition: $transition;
-        &:hover {
-          opacity: 0.5;
-        }
-        span {
-          margin-right: 0.5rem;
-        }
+        margin-bottom: 1.5rem;
       }
+    }
+    .btn--transparent {
+      width: 189px;
+      margin-bottom: 1rem;
+      margin-right: 0;
     }
     &--close {
       position: absolute;
-      right: 1rem;
-      top: 2.3rem;
-      cursor: pointer;
+      right: 1.5rem;
+      top: 1.2rem;
+      transition: $transition;
+      &:hover {
+        transform: rotate(180deg);
+      }
     }
   }
 }

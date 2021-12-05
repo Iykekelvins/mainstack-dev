@@ -1,0 +1,52 @@
+.card-one {
+  display: flex;
+  padding: 2rem;
+  background: linear-gradient(180deg, #22252d 0%, #0a0c10 100%);
+  border-radius: 30px;
+  position: relative;
+  margin-bottom: 4rem;
+  button {
+    position: absolute;
+    bottom: 2rem;
+  }
+  h2 {
+    color: $white;
+    margin-top: 0;
+  }
+  p {
+    color: $dark-grey;
+    width: 70%;
+  }
+  article {
+    flex: 0.5;
+  }
+  .flex-ac {
+    gap: 1rem;
+  }
+}
+
+@include media("<=850px") {
+  .card-one {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    button {
+      position: unset;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      br {
+        display: none;
+      }
+    }
+    p {
+      width: 100%;
+    }
+  }
+}
+
+@include media("<=400px") {
+  .card-one {
+    padding: 2rem 1rem 1rem;
+  }
+}

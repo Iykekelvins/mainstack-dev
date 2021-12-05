@@ -12,17 +12,13 @@
 // COMPONENTS
 @import "./_components/navbar";
 @import "./_components/button";
+@import "./_components/icons";
 
 //PAGES
-
-//LANDING PAGE
-@import "./_pages/_landing-page/landing-page";
-
-//DESTINATION PAGE
-@import "./_pages/_destination-page/destination";
-
-//TECHNOLOGY PAGE
-@import "./_pages/_technology-page/technology";
-
-//CREW PAGE
-@import "./_pages/_crew-page/crew";
+@import "./_pages/_landing-page/hero";
+@import "./_pages/_landing-page/dashboard";
+@import "./_pages/_landing-page/card-one";
+@import "./_pages/_landing-page/card-two";
+@import "./_pages/_landing-page/social-cards";
+@import "./_pages/_landing-page/card-three";
+@import "./_pages/_landing-page/payments";

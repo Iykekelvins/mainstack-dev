@@ -1,0 +1,62 @@
+.icon {
+  position: absolute;
+}
+
+.link {
+  top: 2rem;
+  left: 0;
+}
+
+.calendly {
+  left: 3rem;
+}
+
+.music {
+  top: 5.5rem;
+  right: 5rem;
+}
+
+.beauty {
+  right: -2rem;
+}
+
+.matte {
+  bottom: -6rem;
+  left: 8rem;
+}
+
+.instagram {
+  bottom: -16rem;
+  left: 22rem;
+}
+
+.mailchimp {
+  right: 4rem;
+  bottom: -8rem;
+}
+
+.youtube {
+  left: -2rem;
+  bottom: -15rem;
+}
+
+.paypal {
+  right: -2rem;
+  bottom: -18rem;
+}
+
+.tiktok {
+  right: -3rem;
+  bottom: 0;
+}
+
+.spotify {
+  left: -3rem;
+  top: 8rem;
+}
+
+@include media("<=1023px") {
+  .icon {
+    display: none;
+  }
+}

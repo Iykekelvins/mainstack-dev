@@ -1,0 +1,52 @@
+.social-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 5rem;
+  &--card {
+    background: $white;
+    padding: 4rem 2.5rem 0;
+    border-radius: 30px;
+    text-align: left;
+    h4 {
+      margin-bottom: -0.5rem;
+      margin-top: 0.5rem;
+    }
+    p {
+      margin-bottom: 3rem;
+      color: $main-black;
+      span {
+        color: $primary-color;
+      }
+    }
+  }
+  &--red {
+    color: $yt-red;
+  }
+  &--blue {
+    color: $twitter-blue;
+  }
+  &--green {
+    color: $spotify-green;
+  }
+  &--pink {
+    color: $apple-pink;
+  }
+}
+
+@include media("<=850px") {
+  .social-cards {
+    grid-template-columns: 1fr;
+    &--card {
+      text-align: center;
+      padding-top: 2rem;
+    }
+  }
+}
+
+@include media("<=400px") {
+  .social-cards--card {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

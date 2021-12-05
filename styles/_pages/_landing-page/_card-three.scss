@@ -1,0 +1,58 @@
+.card-three {
+  background: $white;
+  border-radius: 30px;
+  padding: 0 2rem 0;
+  margin: 3rem 0;
+  position: relative;
+  &--info {
+    margin-right: 1.5rem;
+  }
+
+  h2 {
+    color: $main-black;
+    margin-top: 3rem;
+    span {
+      color: $pink;
+    }
+  }
+  h4 {
+    color: $primary-color;
+    position: absolute;
+    top: 2rem;
+    margin: 0;
+  }
+  p {
+    color: $secondary-color;
+    margin-bottom: 0;
+  }
+  article {
+    flex: 1;
+  }
+  button {
+    margin-top: 2rem;
+    width: 122px;
+  }
+}
+
+@include media("<=850px") {
+  .card-three {
+    flex-direction: column;
+    text-align: center;
+    &--info {
+      margin-right: unset;
+    }
+    h2 {
+      margin-top: 1rem;
+    }
+    h4 {
+      position: unset;
+      margin-top: 2rem;
+    }
+  }
+}
+
+@include media("<=400px") {
+  .card-three {
+    padding: 0 1rem 0;
+  }
+}

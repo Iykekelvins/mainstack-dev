@@ -1,25 +1,53 @@
-.btn-container {
-  z-index: 1;
-  .btn {
-    font-size: 2rem;
-    background: white;
-    height: 274px;
-    width: 274px;
-    border-radius: 50%;
-    font-family: "Bellefair", serif;
-    transition: $transition;
-    position: relative;
+.btn {
+  border-radius: 100px;
+  transition: $transition;
+  font-size: 1rem;
+  &--white {
+    color: $main-black;
+    background: $white;
+
+    width: 122px;
+    height: 47px;
     &:hover {
-      &::after {
-        content: "";
-        background: $blur;
-        backdrop-filter: blur(81.5485px);
-        position: fixed;
-        height: 400px;
-        width: 400px;
-        z-index: -1;
-        border-radius: 50%;
-      }
+      border: 1px solid $white;
+      color: $white;
+      background: none;
+    }
+  }
+  &--pink {
+    color: $white;
+    background: $pink;
+    width: 234px;
+    height: 72px;
+
+    &:hover {
+      border: 1px solid $pink;
+      color: pink;
+      background: none;
+    }
+  }
+  &--black {
+    color: $white;
+    background: $main-black;
+    width: 189px;
+    height: 47px;
+
+    &:hover {
+      color: $black;
+      background: $transparent;
+      border: 1px solid $main-black;
+    }
+  }
+  &--transparent {
+    color: $black;
+    background: $transparent;
+    width: 88px;
+    height: 47px;
+    border: 1px solid $main-black;
+    margin-right: 1rem;
+    &:hover {
+      color: $white;
+      background: $main-black;
     }
   }
 }

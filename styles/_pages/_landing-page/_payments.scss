@@ -1,0 +1,35 @@
+.payments {
+  margin-top: 2rem;
+  gap: 1.5rem;
+  &--card {
+    border-radius: 30px;
+    background: $white;
+    padding: 2rem 2rem 1rem;
+    &--blue {
+      color: $blue;
+    }
+    &--orange {
+      color: $orange;
+    }
+    h4 {
+      margin-top: 0;
+      margin-bottom: -0.5rem;
+    }
+    p {
+      color: $main-black;
+      span {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+@include media("<=850px") {
+  .payments {
+    flex-direction: column;
+    &--card {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
