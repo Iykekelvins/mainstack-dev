@@ -1,5 +1,9 @@
 .icon {
   position: absolute;
+  animation-name: move;
+  animation-timing-function: linear;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 
 .link {
@@ -53,6 +57,18 @@
 .spotify {
   left: -3rem;
   top: 8rem;
+}
+
+@keyframes move {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @include media("<=1023px") {
